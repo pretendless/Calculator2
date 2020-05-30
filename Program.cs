@@ -76,6 +76,9 @@ namespace Task4
             if(name.ToUpper() == "COS")
                 return COS();
 
+            if(name.ToUpper() == "TAN")
+                return TAN();
+
             throw new Exception("No solution was found");
          }
 
@@ -99,6 +102,14 @@ namespace Task4
          double COS()
          {
              return Math.Cos(x);
+         }
+
+         double TAN()
+         {
+             if(COS() == 0)
+                throw new Exception("Cant solve");
+
+            return SIN() / COS();
          }
 
     }
