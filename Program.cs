@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Task4
 {
@@ -11,12 +12,41 @@ namespace Task4
 
             if(s.Contains('('))
                 return new Function(s);
-
-            return new Expression(s);
+            
+            if(s.Any(char.IsDigit))
+                return new Expression(s);
+            
+            return new Constant(s);
         }
 
         public abstract double Solve();
         public abstract string Display();
+    }
+
+    public class Constant : Operation
+    {
+        public string name;
+
+        public Constant(string s)
+        {
+            name = s.Replace(" ", "");
+        }
+
+        public override double Solve()
+         {
+            if(name.ToUpper() == "PI")
+                return Math.PI;
+            
+            if(name.ToUpper() == "E")
+                return Math.E;
+
+            throw new Exception("No solution was found");
+         }
+        
+        public override string Display()
+         {
+             return name;
+         }
     }
 
     public class Function : Operation
@@ -76,6 +106,9 @@ namespace Task4
             if(name.ToUpper() == "COS")
                 return COS();
 
+            if(name.ToUpper() == "TAN")
+                return TAN();
+
             throw new Exception("No solution was found");
          }
 
@@ -99,6 +132,14 @@ namespace Task4
          double COS()
          {
              return Math.Cos(x);
+         }
+
+         double TAN()
+         {
+             if(COS() == 0)
+                throw new Exception("Cant solve");
+
+            return SIN() / COS();
          }
 
     }
