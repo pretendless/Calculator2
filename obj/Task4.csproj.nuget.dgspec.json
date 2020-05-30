@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pret3\\Desktop\\ITMO\\Instruments\\Lab 1\\Task4\\Task4.csproj": {}
+    "C:\\Users\\pret3\\Desktop\\GitHub Reps\\Calculator\\Task4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pret3\\Desktop\\ITMO\\Instruments\\Lab 1\\Task4\\Task4.csproj": {
+    "C:\\Users\\pret3\\Desktop\\GitHub Reps\\Calculator\\Task4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pret3\\Desktop\\ITMO\\Instruments\\Lab 1\\Task4\\Task4.csproj",
+        "projectUniqueName": "C:\\Users\\pret3\\Desktop\\GitHub Reps\\Calculator\\Task4.csproj",
         "projectName": "Task4",
-        "projectPath": "C:\\Users\\pret3\\Desktop\\ITMO\\Instruments\\Lab 1\\Task4\\Task4.csproj",
+        "projectPath": "C:\\Users\\pret3\\Desktop\\GitHub Reps\\Calculator\\Task4.csproj",
         "packagesPath": "C:\\Users\\pret3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pret3\\Desktop\\ITMO\\Instruments\\Lab 1\\Task4\\obj\\",
+        "outputPath": "C:\\Users\\pret3\\Desktop\\GitHub Reps\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pret3\\AppData\\Roaming\\NuGet\\NuGet.Config",

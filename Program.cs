@@ -70,6 +70,9 @@ namespace Task4
             if(name.ToUpper() == "SQR")
                 return SQR();
 
+            if(name.ToUpper() == "SIN")
+                return SIN();
+
             throw new Exception("No solution was found");
          }
 
@@ -83,6 +86,11 @@ namespace Task4
          double SQR()
          {
              return x*x;
+         }
+
+         double SIN()
+         {
+             return Math.Sin(x);
          }
 
     }
