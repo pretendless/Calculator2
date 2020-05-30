@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
 
 namespace Task4
 {
@@ -351,9 +356,27 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("input the expression: ");
-            string s;
-            s = Console.ReadLine();
+            string mode, s;
+            Console.WriteLine("If you want to read from console - type CNS, if from file - type the name of a file");
+            mode = Console.ReadLine();
+            if(mode == "CNS")
+            {
+                Console.WriteLine("input the expression: ");
+                s = Console.ReadLine();
+            }
+            else
+            {
+                try
+                {
+                    StreamReader SR = new StreamReader(mode);
+                    s = SR.ReadLine();
+                }
+                catch
+                {
+                    throw new FormatException("Error while trying to configure file"); 
+                }
+            }
+            
             Operation operation = Operation.Resolve(s);
 
             Console.WriteLine(operation.Solve());
