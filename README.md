@@ -3,6 +3,7 @@
 Calculator2 allows you to perform simple ariphmethic operations like sum, sin or power.
 
 Operations availible:
+
 	a+b : sum
 	a-b : diff
 	a*b : multiplication
